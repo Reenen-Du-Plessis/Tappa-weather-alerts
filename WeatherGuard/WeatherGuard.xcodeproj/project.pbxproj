@@ -16,6 +16,11 @@
 		4CC14C102A7ADC81009C9575 /* WeatherGuardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC14C0F2A7ADC81009C9575 /* WeatherGuardUITests.swift */; };
 		4CC14C122A7ADC81009C9575 /* WeatherGuardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC14C112A7ADC81009C9575 /* WeatherGuardUITestsLaunchTests.swift */; };
 		4CC14C1F2A7ADD17009C9575 /* WeatherAlertsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC14C1E2A7ADD17009C9575 /* WeatherAlertsCollectionViewController.swift */; };
+		4CC14C2A2A7B7931009C9575 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4CC14C292A7B7931009C9575 /* Kingfisher */; };
+		4CC14C2C2A7B79AB009C9575 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC14C2B2A7B79AB009C9575 /* NetworkClient.swift */; };
+		4CC14C2E2A7B7A43009C9575 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC14C2D2A7B7A43009C9575 /* Endpoints.swift */; };
+		4CC14C302A7B7A80009C9575 /* WeatherAlertsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC14C2F2A7B7A80009C9575 /* WeatherAlertsModel.swift */; };
+		4CC14C332A7B7D2D009C9575 /* URLSession+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC14C322A7B7D2D009C9575 /* URLSession+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,10 @@
 		4CC14C0F2A7ADC81009C9575 /* WeatherGuardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherGuardUITests.swift; sourceTree = "<group>"; };
 		4CC14C112A7ADC81009C9575 /* WeatherGuardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherGuardUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4CC14C1E2A7ADD17009C9575 /* WeatherAlertsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAlertsCollectionViewController.swift; sourceTree = "<group>"; };
+		4CC14C2B2A7B79AB009C9575 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		4CC14C2D2A7B7A43009C9575 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		4CC14C2F2A7B7A80009C9575 /* WeatherAlertsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAlertsModel.swift; sourceTree = "<group>"; };
+		4CC14C322A7B7D2D009C9575 /* URLSession+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CC14C2A2A7B7931009C9575 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +109,8 @@
 		4CC14BEA2A7ADC7F009C9575 /* WeatherGuard */ = {
 			isa = PBXGroup;
 			children = (
+				4CC14C312A7B7D1E009C9575 /* Extensions */,
+				4CC14C272A7AE343009C9575 /* Networking */,
 				4CC14C222A7ADD7C009C9575 /* Features */,
 				4CC14C202A7ADD1D009C9575 /* Core */,
 				4CC14BFC2A7ADC80009C9575 /* Info.plist */,
@@ -164,6 +176,7 @@
 		4CC14C242A7ADDA7009C9575 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4CC14C2F2A7B7A80009C9575 /* WeatherAlertsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -183,6 +196,23 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		4CC14C272A7AE343009C9575 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				4CC14C2B2A7B79AB009C9575 /* NetworkClient.swift */,
+				4CC14C2D2A7B7A43009C9575 /* Endpoints.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		4CC14C312A7B7D1E009C9575 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4CC14C322A7B7D2D009C9575 /* URLSession+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -199,6 +229,9 @@
 			dependencies = (
 			);
 			name = WeatherGuard;
+			packageProductDependencies = (
+				4CC14C292A7B7931009C9575 /* Kingfisher */,
+			);
 			productName = WeatherGuard;
 			productReference = 4CC14BE82A7ADC7F009C9575 /* WeatherGuard.app */;
 			productType = "com.apple.product-type.application";
@@ -271,6 +304,9 @@
 				Base,
 			);
 			mainGroup = 4CC14BDF2A7ADC7E009C9575;
+			packageReferences = (
+				4CC14C282A7B7931009C9575 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 4CC14BE92A7ADC7F009C9575 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -314,8 +350,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CC14BF62A7ADC7F009C9575 /* WeatherGuard.xcdatamodeld in Sources */,
+				4CC14C2C2A7B79AB009C9575 /* NetworkClient.swift in Sources */,
 				4CC14C1F2A7ADD17009C9575 /* WeatherAlertsCollectionViewController.swift in Sources */,
 				4CC14BEC2A7ADC7F009C9575 /* AppDelegate.swift in Sources */,
+				4CC14C332A7B7D2D009C9575 /* URLSession+Extension.swift in Sources */,
+				4CC14C302A7B7A80009C9575 /* WeatherAlertsModel.swift in Sources */,
+				4CC14C2E2A7B7A43009C9575 /* Endpoints.swift in Sources */,
 				4CC14BEE2A7ADC7F009C9575 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -648,6 +688,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4CC14C282A7B7931009C9575 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4CC14C292A7B7931009C9575 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4CC14C282A7B7931009C9575 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		4CC14BF42A7ADC7F009C9575 /* WeatherGuard.xcdatamodeld */ = {
